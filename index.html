@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twój Wymarzony Apartament</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Słoneczny Apartament</h1>
+        <p class="subtitle">Twój luksusowy dom z dala od domu. Zarezerwuj swój wymarzony pobyt.</p>
+    </header>
+
+    <div class="container">
+        <section class="features">
+            <div class="feature-box">
+                <h3>O mieszkaniu</h3>
+                <p>Nowoczesne, w pełni wyposażone mieszkanie w ścisłym centrum. Przestronny salon, sypialnia i pełna kuchnia. Idealne miejsce na relaks i pracę zdalną.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Udogodnienia</h3>
+                <ul>
+                    <li>🚀 Superszybkie Wi-Fi (Światłowód 1Gbps)</li>
+                    <li>❄️ Klimatyzacja w każdym pokoju</li>
+                    <li>🚗 Prywatne, podziemne miejsce parkingowe</li>
+                    <li>☕ Ekspres ciśnieniowy z darmową kawą</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="gallery-container">
+            <h2>Galeria Zdjęć</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Salon">
+                <img src="https://images.unsplash.com/photo-1502672260266-1c1de2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sypialnia">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745a872e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kuchnia">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Łazienka">
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <h2>Zarezerwuj swój pobyt</h2>
+            <form id="bookingForm" class="booking-form">
+                
+                <div class="form-group">
+                    <label for="clientName">Imię i nazwisko:</label>
+                    <input type="text" id="clientName" placeholder="Jan Kowalski" required>
+                </div>
+                
+                <div class="form-group" style="position: static;">
+                    <label>Wybierz termin (Przyjazd - Wyjazd):</label>
+                    <input type="text" id="dateRangeInput" readonly placeholder="Kliknij, aby wybrać daty" required>
+                    
+                    <div class="calendar-popup" id="customCalendar">
+                        <div class="calendar-header">
+                            <button type="button" id="prevMonth">&#10094;</button>
+                            <span id="monthYearDisplay">Marzec 2026</span>
+                            <button type="button" id="nextMonth">&#10095;</button>
+                        </div>
+                        <div class="calendar-weekdays">
+                            <span>Pn</span><span>Wt</span><span>Śr</span><span>Cz</span><span>Pt</span><span>Sb</span><span>Nd</span>
+                        </div>
+                        <div class="calendar-days" id="calendarDays"></div>
+                        <div class="calendar-info" id="calendarInfo">Krok 1: Wybierz datę przyjazdu</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Liczba gości:</label>
+                    <input type="number" id="guests" min="1" max="4" value="2" required>
+                </div>
+                
+                <button type="submit" class="btn-reserve" id="submitBtn">Rezerwuj</button>
+                <div id="formStatus" class="form-messages"></div>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Słoneczny Apartament.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
